@@ -19,6 +19,10 @@ interface Pokemon {
   }[];
 }
 
+if (process.env.NEXT_PUBLIC_API_MOCKING) {
+  import("@/lib/mocks");
+}
+
 export default function Home() {
   const [pokemonName, setPokemonName] = useState("");
   const [pokemonInfo, setPokemonInfo] = useState({} as Pokemon);

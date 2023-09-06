@@ -60,7 +60,7 @@ export const bulbasaur = {
   order: 1,
   past_types: [],
   species: {
-    name: "bulbasaur",
+    name: "pikachu",
     url: "https://pokeapi.co/api/v2/pokemon-species/1/",
   },
   sprites: {

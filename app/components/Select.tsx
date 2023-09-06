@@ -30,17 +30,17 @@ export default function Select({ options, onChange }: SelectProps) {
 
   return (
     <div className="relative h-10 w-96 rounded bg-white border border-gray-300">
-      <div
+      <button
         className="flex items-center px-4 w-full h-full"
         onClick={toggleSelect}
+        aria-expanded={isOpen}
+        aria-controls="listbox"
+        role="combobox"
       >
         {hasOption ? selectedOption.label : "Selecione"}
-      </div>
+      </button>
       {isOpen && (
-        <ul
-          className="absolute mt-1 py-4 top-full left-0 right-0 bg-white z-50 shadow rounded"
-          role="listbox"
-        >
+        <ul className="absolute mt-1 py-4 top-full left-0 right-0 bg-white z-50 shadow rounded">
           {options.map((option) => (
             <li
               key={option.value}
